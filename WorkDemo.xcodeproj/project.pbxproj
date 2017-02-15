@@ -15,6 +15,16 @@
 		620147021E139C7A00D91A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620147001E139C7A00D91A73 /* LaunchScreen.storyboard */; };
 		6201470D1E139C7A00D91A73 /* WorkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6201470C1E139C7A00D91A73 /* WorkDemoTests.m */; };
 		620147181E139C7A00D91A73 /* WorkDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 620147171E139C7A00D91A73 /* WorkDemoUITests.m */; };
+		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
+		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
+		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
+		628F5A011E54324D0051A46C /* ProBasicVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A001E54324D0051A46C /* ProBasicVModel.m */; };
+		628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A031E5432E60051A46C /* TestHomeVModel.m */; };
+		628F5A081E54337F0051A46C /* TestHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A071E54337F0051A46C /* TestHomeModel.m */; };
+		628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A0A1E5433B00051A46C /* ProBasicModel.m */; };
+		628F5A0F1E5434CB0051A46C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A0E1E5434CB0051A46C /* TestViewController.m */; };
+		628F5A151E5435250051A46C /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A141E5435250051A46C /* TestCell.m */; };
+		628F5A191E544D2F0051A46C /* GCDBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A181E544D2F0051A46C /* GCDBase.m */; };
 		85E320CD27B9E535ED6BDEC7 /* libPods-WorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9D51A1011F141C89FD6D87 /* libPods-WorkDemoUITests.a */; };
 		D91EE4AEB3C7E0BFBD796070 /* libPods-WorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90AD8F813BF8885297C229 /* libPods-WorkDemoTests.a */; };
 		DE03006BED0A54CE33206F7C /* libPods-WorkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73662F7FB8EE9D6C28A069B6 /* libPods-WorkDemo.a */; };
@@ -60,6 +70,25 @@
 		620147131E139C7A00D91A73 /* WorkDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		620147171E139C7A00D91A73 /* WorkDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkDemoUITests.m; sourceTree = "<group>"; };
 		620147191E139C7A00D91A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
+		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
+		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		628F59F81E5430E40051A46C /* ProBasicSimNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProBasicSimNetworking.h; sourceTree = "<group>"; };
+		628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBasicSimNetworking.m; sourceTree = "<group>"; };
+		628F59FF1E54324D0051A46C /* ProBasicVModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProBasicVModel.h; sourceTree = "<group>"; };
+		628F5A001E54324D0051A46C /* ProBasicVModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBasicVModel.m; sourceTree = "<group>"; };
+		628F5A021E5432E60051A46C /* TestHomeVModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHomeVModel.h; sourceTree = "<group>"; };
+		628F5A031E5432E60051A46C /* TestHomeVModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHomeVModel.m; sourceTree = "<group>"; };
+		628F5A061E54337F0051A46C /* TestHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHomeModel.h; sourceTree = "<group>"; };
+		628F5A071E54337F0051A46C /* TestHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHomeModel.m; sourceTree = "<group>"; };
+		628F5A091E5433B00051A46C /* ProBasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProBasicModel.h; sourceTree = "<group>"; };
+		628F5A0A1E5433B00051A46C /* ProBasicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBasicModel.m; sourceTree = "<group>"; };
+		628F5A0D1E5434CB0051A46C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		628F5A0E1E5434CB0051A46C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		628F5A131E5435250051A46C /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		628F5A141E5435250051A46C /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		628F5A171E544D2F0051A46C /* GCDBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDBase.h; sourceTree = "<group>"; };
+		628F5A181E544D2F0051A46C /* GCDBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDBase.m; sourceTree = "<group>"; };
 		73662F7FB8EE9D6C28A069B6 /* libPods-WorkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7C9D3C2A78A6C2C53D9CDC /* Pods-WorkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkDemo/Pods-WorkDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FACD506C0F5313C65B687A04 /* Pods-WorkDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkDemoUITests/Pods-WorkDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +160,8 @@
 		620146F11E139C7A00D91A73 /* WorkDemo */ = {
 			isa = PBXGroup;
 			children = (
+				628F5A161E544D020051A46C /* Base */,
+				628F59F11E542C310051A46C /* Manager */,
 				628F59F01E541F840051A46C /* MVVM */,
 				620146F51E139C7A00D91A73 /* AppDelegate.h */,
 				620146F61E139C7A00D91A73 /* AppDelegate.m */,
@@ -174,8 +205,74 @@
 		628F59F01E541F840051A46C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				628F5A0C1E5434990051A46C /* View */,
+				628F5A051E5433560051A46C /* Model */,
+				628F59FB1E5431320051A46C /* ViewModel */,
+				628F59F51E5430A90051A46C /* SimNetworking */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		628F59F11E542C310051A46C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				628F59F21E542C450051A46C /* SDWebImageTools.h */,
+				628F59F31E542C450051A46C /* SDWebImageTools.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		628F59F51E5430A90051A46C /* SimNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				628F59F61E5430BA0051A46C /* test.json */,
+				628F59F81E5430E40051A46C /* ProBasicSimNetworking.h */,
+				628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */,
+			);
+			path = SimNetworking;
+			sourceTree = "<group>";
+		};
+		628F59FB1E5431320051A46C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				628F59FF1E54324D0051A46C /* ProBasicVModel.h */,
+				628F5A001E54324D0051A46C /* ProBasicVModel.m */,
+				628F5A021E5432E60051A46C /* TestHomeVModel.h */,
+				628F5A031E5432E60051A46C /* TestHomeVModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		628F5A051E5433560051A46C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				628F5A091E5433B00051A46C /* ProBasicModel.h */,
+				628F5A0A1E5433B00051A46C /* ProBasicModel.m */,
+				628F5A061E54337F0051A46C /* TestHomeModel.h */,
+				628F5A071E54337F0051A46C /* TestHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		628F5A0C1E5434990051A46C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				628F5A0D1E5434CB0051A46C /* TestViewController.h */,
+				628F5A0E1E5434CB0051A46C /* TestViewController.m */,
+				628F5A131E5435250051A46C /* TestCell.h */,
+				628F5A141E5435250051A46C /* TestCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		628F5A161E544D020051A46C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				628F5A171E544D2F0051A46C /* GCDBase.h */,
+				628F5A181E544D2F0051A46C /* GCDBase.m */,
+			);
+			name = Base;
+			path = MVVM/Base;
 			sourceTree = "<group>";
 		};
 		E056C725750F492EC2C81553 /* Frameworks */ = {
@@ -307,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				620147021E139C7A00D91A73 /* LaunchScreen.storyboard in Resources */,
+				628F59F71E5430BA0051A46C /* test.json in Resources */,
 				620146FF1E139C7A00D91A73 /* Assets.xcassets in Resources */,
 				620146FD1E139C7A00D91A73 /* Main.storyboard in Resources */,
 			);
@@ -471,7 +569,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */,
 				620146FA1E139C7A00D91A73 /* ViewController.m in Sources */,
+				628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */,
+				628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */,
+				628F5A151E5435250051A46C /* TestCell.m in Sources */,
+				628F5A0F1E5434CB0051A46C /* TestViewController.m in Sources */,
+				628F5A011E54324D0051A46C /* ProBasicVModel.m in Sources */,
+				628F5A081E54337F0051A46C /* TestHomeModel.m in Sources */,
+				628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */,
+				628F5A191E544D2F0051A46C /* GCDBase.m in Sources */,
 				620146F71E139C7A00D91A73 /* AppDelegate.m in Sources */,
 				620146F41E139C7A00D91A73 /* main.m in Sources */,
 			);
