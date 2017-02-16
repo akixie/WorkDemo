@@ -25,6 +25,8 @@
 		628F5A0F1E5434CB0051A46C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A0E1E5434CB0051A46C /* TestViewController.m */; };
 		628F5A151E5435250051A46C /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A141E5435250051A46C /* TestCell.m */; };
 		628F5A191E544D2F0051A46C /* GCDBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A181E544D2F0051A46C /* GCDBase.m */; };
+		628F5A1C1E5552470051A46C /* KVCBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A1B1E5552470051A46C /* KVCBase.m */; };
+		628F5A1F1E5578960051A46C /* KVOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F5A1E1E5578960051A46C /* KVOBase.m */; };
 		85E320CD27B9E535ED6BDEC7 /* libPods-WorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9D51A1011F141C89FD6D87 /* libPods-WorkDemoUITests.a */; };
 		D91EE4AEB3C7E0BFBD796070 /* libPods-WorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A90AD8F813BF8885297C229 /* libPods-WorkDemoTests.a */; };
 		DE03006BED0A54CE33206F7C /* libPods-WorkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73662F7FB8EE9D6C28A069B6 /* libPods-WorkDemo.a */; };
@@ -89,6 +91,10 @@
 		628F5A141E5435250051A46C /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
 		628F5A171E544D2F0051A46C /* GCDBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDBase.h; sourceTree = "<group>"; };
 		628F5A181E544D2F0051A46C /* GCDBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDBase.m; sourceTree = "<group>"; };
+		628F5A1A1E5552470051A46C /* KVCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCBase.h; sourceTree = "<group>"; };
+		628F5A1B1E5552470051A46C /* KVCBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCBase.m; sourceTree = "<group>"; };
+		628F5A1D1E5578960051A46C /* KVOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOBase.h; sourceTree = "<group>"; };
+		628F5A1E1E5578960051A46C /* KVOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOBase.m; sourceTree = "<group>"; };
 		73662F7FB8EE9D6C28A069B6 /* libPods-WorkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7C9D3C2A78A6C2C53D9CDC /* Pods-WorkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkDemo/Pods-WorkDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FACD506C0F5313C65B687A04 /* Pods-WorkDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkDemoUITests/Pods-WorkDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +276,10 @@
 			children = (
 				628F5A171E544D2F0051A46C /* GCDBase.h */,
 				628F5A181E544D2F0051A46C /* GCDBase.m */,
+				628F5A1A1E5552470051A46C /* KVCBase.h */,
+				628F5A1B1E5552470051A46C /* KVCBase.m */,
+				628F5A1D1E5578960051A46C /* KVOBase.h */,
+				628F5A1E1E5578960051A46C /* KVOBase.m */,
 			);
 			name = Base;
 			path = MVVM/Base;
@@ -573,12 +583,14 @@
 				620146FA1E139C7A00D91A73 /* ViewController.m in Sources */,
 				628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */,
 				628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */,
+				628F5A1C1E5552470051A46C /* KVCBase.m in Sources */,
 				628F5A151E5435250051A46C /* TestCell.m in Sources */,
 				628F5A0F1E5434CB0051A46C /* TestViewController.m in Sources */,
 				628F5A011E54324D0051A46C /* ProBasicVModel.m in Sources */,
 				628F5A081E54337F0051A46C /* TestHomeModel.m in Sources */,
 				628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */,
 				628F5A191E544D2F0051A46C /* GCDBase.m in Sources */,
+				628F5A1F1E5578960051A46C /* KVOBase.m in Sources */,
 				620146F71E139C7A00D91A73 /* AppDelegate.m in Sources */,
 				620146F41E139C7A00D91A73 /* main.m in Sources */,
 			);

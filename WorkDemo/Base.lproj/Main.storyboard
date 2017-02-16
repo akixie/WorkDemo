@@ -30,7 +30,7 @@
                                 </constraints>
                                 <state key="normal" title="MVVM"/>
                                 <connections>
-                                    <segue destination="qzV-mT-QsM" kind="push" id="SlE-i1-kc6"/>
+                                    <segue destination="qzV-mT-QsM" kind="show" id="SlE-i1-kc6"/>
                                 </connections>
                             </button>
                         </subviews>

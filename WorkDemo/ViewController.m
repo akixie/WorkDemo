@@ -236,6 +236,7 @@ typedef void (^blockD2)(int a);
     
     ddd = ^(int aa){
         int b = aa;
+        NSLog(@"%d",b);
     };
     
     
@@ -246,8 +247,10 @@ typedef void (^blockD2)(int a);
     };
     
     NSString *resultStr = strTest(@"hehe");
+    NSLog(@"%@",resultStr);
     
     NSString *resultStr2 = ^(NSString *str){return [NSString stringWithFormat:@"log %@",str];}(@"hehe");
+    NSLog(@"%@",resultStr2);
     
     
  
@@ -271,14 +274,17 @@ typedef void (^blockD2)(int a);
     };
     
     NSString *ba = myBlock(8);
+    NSLog(@"%@",ba);
     
     
     int result = ^(int a) {return a*a;} (5);
+    NSLog(@"%d",result);
     
     int (^square)(int);
     square = ^(int a ){return a*a ;}; // 将刚刚Block 实体指定给 square
     
     int resulta =square(5); // 感觉上不就是funtion的用法吗？
+    NSLog(@"%d",resulta);
     
     
     
