@@ -202,6 +202,118 @@
         NSLog(@"dispatch_async3");
         
     });
+    
+    
+}
+
+-(void)doSometing:(NSString*)str{
+    NSLog(@"do str:%@",str);
+}
+
+-(void)doSomethingArray:(NSArray*)array{
+    NSLog(@"对处理完后的数组，再次进行操作");
+}
+
+//平行运算
+-(void)test01{
+    //假定 -doSomethingIntensiveWith: 是线程安全的且可以同时执行多个.
+    //一个array通常包含多个元素，这样的话，我们可以很简单地使用GCD来平行运算
+    NSArray *array = [[NSArray alloc] initWithObjects:@"a",@"b",@"c",@"d", nil];
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    for (NSString *str in array) {
+        dispatch_async(globalQueue, ^{
+            [self doSometing:str];
+        });
+    }
+    
+    //操作完数组元素后，还要对操作结果进行其它操作，这时候要用dispatch group,将多个block组成一组以检测这些block全部完成或等待全部完成，
+    dispatch_queue_t gQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    for (NSString *str in array) {
+        dispatch_group_async(group, gQueue, ^{
+            [self doSometing:str];
+        });
+        
+    }
+    //dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    //等group里的task都执行完后执行notify方法里的内容，相当于把wait方法及之后要执行的代码合并到一起了。
+    dispatch_group_notify(group, gQueue, ^{
+        [self doSomethingArray:array];
+    });
+    
+    
+    //如果doSomethingArray需要在主线程中执行，比如操作GUI，那么
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        [self doSomethingArray:array];
+    });
+    
+}
+
+-(void)groupasyncDemo{
+    dispatch_queue_t disqueue =  dispatch_queue_create("com.shidaiyinuo.NetWorkStudy", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t disgroup = dispatch_group_create();
+    dispatch_group_async(disgroup, disqueue, ^{
+        NSLog(@"任务一完成");
+    });
+    dispatch_group_async(disgroup, disqueue, ^{
+        sleep(8);
+        NSLog(@"任务二完成");
+    });
+    dispatch_group_notify(disgroup, disqueue, ^{
+        NSLog(@"dispatch_group_notify 执行");
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        dispatch_group_wait(disgroup, dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC));
+        NSLog(@"dispatch_group_wait 结束");
+    });
+    
+    //向group中放入两个任务(准确讲是将任务加入到了并行队列disqueue中执行，然后队列和group关联当队列上任务执行完毕时group会进行同步)，
+    //第二个任务会等待8秒所以第一个任务会先完成；会先打印任务一完成再打印任务二完成，
+    //当两个任务都完成时dispatch_group_notify中的block会执行；会接着打印dispatch_group_notify 执行；
+    //dispatch_group_wait设置了超时时间为5秒所以它会在5秒后停止等待打印dispatch_group_wait 结束(任务二会等待8秒所以它会在任务二完成前打印)；
+    
+    /*
+     输出结果：
+     2017-02-15 15:00:43.793 任务一完成
+     2017-02-15 15:00:48.798 dispatch_group_wait 结束
+     2017-02-15 15:00:51.795 任务二完成
+     2017-02-15 15:00:51.795 dispatch_group_notify 执行
+     
+     */
+}
+
+-(void)groupasyncDemo2{
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("concurrent queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, concurrentQueue, ^{
+        sleep(5);
+        NSLog(@"第一个任务完成");
+    });
+    dispatch_group_async(group, concurrentQueue, ^{
+        sleep(6);
+        NSLog(@"第二个任务完成");
+    });
+    dispatch_group_async(group, globalQueue, ^{
+        sleep(10);
+        NSLog(@"第三个任务完成");
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"任务都完成了");
+    });
+    //上面的代码里有两个队列一个是我自己创建的并行队列dispatchQueue，
+    //另一个是系统提供的并行队列globalQueue；
+    //dispatch_group_notify会等这两个队列上的任务都执行完毕才会执行自己的代码块。
+    
+    /*
+     输出结果：
+     2017-02-15 15:17:51.261 第一个任务完成
+     2017-02-15 15:17:52.261 第二个任务完成
+     2017-02-15 15:17:56.266 第三个任务完成
+     2017-02-15 15:17:56.266 任务都完成了
+     
+     */
+    
 }
 
 @end
