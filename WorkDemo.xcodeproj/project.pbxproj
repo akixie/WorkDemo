@@ -23,6 +23,7 @@
 		622069BE1E5ADB530043CF47 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069BD1E5ADB530043CF47 /* Student.m */; };
 		622069C11E5ADB860043CF47 /* RuntimeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C01E5ADB860043CF47 /* RuntimeBase.m */; };
 		622069C41E5ADBCF0043CF47 /* Student+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C31E5ADBCF0043CF47 /* Student+Category.m */; };
+		622069C71E5AE3B60043CF47 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */; };
 		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
 		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
 		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
@@ -93,6 +94,8 @@
 		622069C01E5ADB860043CF47 /* RuntimeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeBase.m; sourceTree = "<group>"; };
 		622069C21E5ADBCF0043CF47 /* Student+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Category.h"; sourceTree = "<group>"; };
 		622069C31E5ADBCF0043CF47 /* Student+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Category.m"; sourceTree = "<group>"; };
+		622069C51E5AE3B60043CF47 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
 		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
 		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				622069BD1E5ADB530043CF47 /* Student.m */,
 				622069C21E5ADBCF0043CF47 /* Student+Category.h */,
 				622069C31E5ADBCF0043CF47 /* Student+Category.m */,
+				622069C51E5AE3B60043CF47 /* NSDictionary+NilSafe.h */,
+				622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */,
 			);
 			path = RunTime;
 			sourceTree = "<group>";
@@ -624,6 +629,7 @@
 				628F5A081E54337F0051A46C /* TestHomeModel.m in Sources */,
 				628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */,
 				6220695B1E5692A30043CF47 /* GCDBase.m in Sources */,
+				622069C71E5AE3B60043CF47 /* NSDictionary+NilSafe.m in Sources */,
 				622069C41E5ADBCF0043CF47 /* Student+Category.m in Sources */,
 				6220695D1E5692A30043CF47 /* KVOBase.m in Sources */,
 				622069BA1E5AC29D0043CF47 /* BlockBase.m in Sources */,
