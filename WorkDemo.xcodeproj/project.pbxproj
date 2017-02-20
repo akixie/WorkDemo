@@ -19,6 +19,7 @@
 		6220695C1E5692A30043CF47 /* KVCBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069561E5692A30043CF47 /* KVCBase.m */; };
 		6220695D1E5692A30043CF47 /* KVOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069581E5692A30043CF47 /* KVOBase.m */; };
 		6220695E1E5692A30043CF47 /* NSCopyingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6220695A1E5692A30043CF47 /* NSCopyingBase.m */; };
+		622069BA1E5AC29D0043CF47 /* BlockBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069B91E5AC29D0043CF47 /* BlockBase.m */; };
 		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
 		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
 		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
@@ -81,6 +82,8 @@
 		622069581E5692A30043CF47 /* KVOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOBase.m; sourceTree = "<group>"; };
 		622069591E5692A30043CF47 /* NSCopyingBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCopyingBase.h; sourceTree = "<group>"; };
 		6220695A1E5692A30043CF47 /* NSCopyingBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCopyingBase.m; sourceTree = "<group>"; };
+		622069B81E5AC29D0043CF47 /* BlockBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBase.h; sourceTree = "<group>"; };
+		622069B91E5AC29D0043CF47 /* BlockBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBase.m; sourceTree = "<group>"; };
 		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
 		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
 		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				622069581E5692A30043CF47 /* KVOBase.m */,
 				622069591E5692A30043CF47 /* NSCopyingBase.h */,
 				6220695A1E5692A30043CF47 /* NSCopyingBase.m */,
+				622069B81E5AC29D0043CF47 /* BlockBase.h */,
+				622069B91E5AC29D0043CF47 /* BlockBase.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */,
 				6220695B1E5692A30043CF47 /* GCDBase.m in Sources */,
 				6220695D1E5692A30043CF47 /* KVOBase.m in Sources */,
+				622069BA1E5AC29D0043CF47 /* BlockBase.m in Sources */,
 				6220695E1E5692A30043CF47 /* NSCopyingBase.m in Sources */,
 				620146F71E139C7A00D91A73 /* AppDelegate.m in Sources */,
 				620146F41E139C7A00D91A73 /* main.m in Sources */,

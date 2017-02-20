@@ -15,15 +15,7 @@ typedef NS_ENUM(NSInteger, OrderType) {
 };
 
 
-void logBlock( int ( ^ theBlock )( void ) )
-{
-    NSLog( @"Closure var X: %i", theBlock() );
-}
 
-
-//定义block
-typedef NSString *(^blockD1)(NSString *paraA);
-typedef void (^blockD2)(int a);
 
 
 @protocol TestDeletage <NSObject>
@@ -55,7 +47,7 @@ typedef void (^blockD2)(int a);
 //weak demo
 @property (nonatomic, strong) void(^aBlock)(id obj, NSUInteger idx, BOOL *stop);
 
-//block demo
+
 
 
 @end
@@ -218,81 +210,6 @@ typedef void (^blockD2)(int a);
 -(void)doSomething:(NSUInteger)idx{
     NSLog(@"dodododo");
 }
-
-
-
-//block demo
--(void)blockDemo{
- 
-
-//1.block定义
-//    回传值 (^名字) (参数列);
-//2.block实现
-//    ^(传入参数列) {行为主体};
-//3.block使用
-    
-    
-    void (^ddd)(int a);
-    
-    ddd = ^(int aa){
-        int b = aa;
-        NSLog(@"%d",b);
-    };
-    
-    
-    NSString *(^strTest)(NSString *str);
-    
-    strTest = ^(NSString *str){
-        return [NSString stringWithFormat:@"log %@",str];
-    };
-    
-    NSString *resultStr = strTest(@"hehe");
-    NSLog(@"%@",resultStr);
-    
-    NSString *resultStr2 = ^(NSString *str){return [NSString stringWithFormat:@"log %@",str];}(@"hehe");
-    NSLog(@"%@",resultStr2);
-    
-    
- 
-    void (^ arrayTest) (NSArray *aa);
-    
-    NSArray *tempArray = @[@"aa",@"bb"];
-   
-    
-    arrayTest = ^(NSArray *temp){
-        NSString *str = temp[0];
-        NSLog(@"log %@",str);
-    };
-    
-    arrayTest(tempArray);
-    
-    NSString * ( ^ myBlock )( int );
-    
-    myBlock = ^( int paramA )
-    {
-        return [ NSString stringWithFormat: @"Passed number: %i", paramA ];
-    };
-    
-    NSString *ba = myBlock(8);
-    NSLog(@"%@",ba);
-    
-    
-    int result = ^(int a) {return a*a;} (5);
-    NSLog(@"%d",result);
-    
-    int (^square)(int);
-    square = ^(int a ){return a*a ;}; // 将刚刚Block 实体指定给 square
-    
-    int resulta =square(5); // 感觉上不就是funtion的用法吗？
-    NSLog(@"%d",resulta);
-    
-    
-    
-    
-    
-    
-}
-
 
 
 @end
