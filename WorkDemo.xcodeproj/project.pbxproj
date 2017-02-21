@@ -24,6 +24,8 @@
 		622069C11E5ADB860043CF47 /* RuntimeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C01E5ADB860043CF47 /* RuntimeBase.m */; };
 		622069C41E5ADBCF0043CF47 /* Student+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C31E5ADBCF0043CF47 /* Student+Category.m */; };
 		622069C71E5AE3B60043CF47 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */; };
+		622069CA1E5BC8810043CF47 /* ThreadBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C91E5BC8810043CF47 /* ThreadBase.m */; };
+		622069CD1E5BDA4C0043CF47 /* ThreadLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069CC1E5BDA4C0043CF47 /* ThreadLock.m */; };
 		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
 		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
 		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
@@ -96,6 +98,10 @@
 		622069C31E5ADBCF0043CF47 /* Student+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Category.m"; sourceTree = "<group>"; };
 		622069C51E5AE3B60043CF47 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		622069C81E5BC8810043CF47 /* ThreadBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadBase.h; sourceTree = "<group>"; };
+		622069C91E5BC8810043CF47 /* ThreadBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadBase.m; sourceTree = "<group>"; };
+		622069CB1E5BDA4C0043CF47 /* ThreadLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLock.h; sourceTree = "<group>"; };
+		622069CC1E5BDA4C0043CF47 /* ThreadLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadLock.m; sourceTree = "<group>"; };
 		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
 		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
 		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -240,6 +246,10 @@
 				6220695A1E5692A30043CF47 /* NSCopyingBase.m */,
 				622069B81E5AC29D0043CF47 /* BlockBase.h */,
 				622069B91E5AC29D0043CF47 /* BlockBase.m */,
+				622069C81E5BC8810043CF47 /* ThreadBase.h */,
+				622069C91E5BC8810043CF47 /* ThreadBase.m */,
+				622069CB1E5BDA4C0043CF47 /* ThreadLock.h */,
+				622069CC1E5BDA4C0043CF47 /* ThreadLock.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -618,7 +628,9 @@
 			files = (
 				628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */,
 				622069C11E5ADB860043CF47 /* RuntimeBase.m in Sources */,
+				622069CD1E5BDA4C0043CF47 /* ThreadLock.m in Sources */,
 				620146FA1E139C7A00D91A73 /* ViewController.m in Sources */,
+				622069CA1E5BC8810043CF47 /* ThreadBase.m in Sources */,
 				622069BE1E5ADB530043CF47 /* Student.m in Sources */,
 				628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */,
 				628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */,
