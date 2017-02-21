@@ -3,7 +3,7 @@
 
 # 目录说明
 
-|----Base  *基础知识* <font color=gray size=5>color=gray</font>
+|----Base  *基础知识*
 
 |----|____RunTime  *动态变量控制，Category属性扩展，动态交换方法，NSDictionary支持Nil与NSNull*
 
