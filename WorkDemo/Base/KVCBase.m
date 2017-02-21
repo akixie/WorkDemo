@@ -11,7 +11,7 @@
 @class Account;
 @class Person;
 
-//键值编码KVC.Key Value Coding（简称KVC）
+
 //KVC的操作方法由NSKeyValueCoding协议提供，而NSObject就实现了这个协议，也就是说ObjC中几乎所有的对象都支持KVC操作
 
 //KVC操作方法如下：

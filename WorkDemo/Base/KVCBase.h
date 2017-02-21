@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//键值编码KVC.Key Value Coding（简称KVC）
+
 @interface KVCBase : NSObject
 
 @end
