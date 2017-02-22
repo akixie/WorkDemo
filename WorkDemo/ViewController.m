@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#import "CarModel.h"
+#import "CoreDataBase.h"
+
 //定义一个枚举
 typedef NS_ENUM(NSInteger, OrderType) {
     OrderTypeGet,
@@ -82,7 +85,65 @@ typedef NS_ENUM(NSInteger, OrderType) {
     
 //    [self StringDemo];
     
+    
+    //增加数据
+//    [self insertCoreData];
+    //查询
+    [self queryCoreData];
 }
+
+//CoreData Demo,增，删、改、查
+-(void)insertCoreData{
+    /*
+     这里最好多添加几条数据便于后面 删、改、查 的操作演示
+     */
+    
+    CarModel *carmodel = [[CarModel alloc]init];
+    carmodel.userID = @"2013";
+    carmodel.carID = @"8f3hf3";
+    carmodel.carName = @"法拉利";
+    carmodel.carNumber = @"京A86868";
+    carmodel.carIdDefault = @"0";
+    if ([[CoreDataBase sharedCoreData] saveCarInfoByCarModel:carmodel]) {
+        NSLog(@"插入数据成功");
+    }
+}
+
+-(void)deleteCoreData
+{
+    CarModel *carmodel = [[CarModel alloc]init];
+    carmodel.carID = @"e28r22";
+    
+    if ([[CoreDataBase sharedCoreData] deleteCarInfoByCarID:carmodel.carID]) {
+        NSLog(@"删除数据成功");
+    }
+}
+
+-(void)updateCoreData
+{
+    CarModel *carmodel = [[CarModel alloc]init];
+    carmodel.userID = @"2012";
+    carmodel.carID = @"r3nkr3";
+    carmodel.carName = @"路虎";
+    carmodel.carNumber = @"京A80808";
+    carmodel.carIdDefault = @"1";
+    if ([[CoreDataBase sharedCoreData] updateCarInfoByCarModel:carmodel]) {
+        NSLog(@"更新数据成功");
+    }
+}
+-(void)queryCoreData
+{
+    CarModel *carmodel = [[CarModel alloc]init];
+    carmodel.userID = @"2013";
+    NSArray *arr = [[CoreDataBase sharedCoreData] queryCarInfoByUserID:carmodel.userID];
+    if (arr) {
+        for (CarModel *model in arr) {
+            NSLog(@"%@---%@---%@---%@---%@",model.userID,model.carID,model.carName,model.carNumber,model.carIdDefault);
+        }
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

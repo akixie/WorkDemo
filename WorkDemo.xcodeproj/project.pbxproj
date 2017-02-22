@@ -26,6 +26,10 @@
 		622069C71E5AE3B60043CF47 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */; };
 		622069CA1E5BC8810043CF47 /* ThreadBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069C91E5BC8810043CF47 /* ThreadBase.m */; };
 		622069CD1E5BDA4C0043CF47 /* ThreadLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069CC1E5BDA4C0043CF47 /* ThreadLock.m */; };
+		622069D11E5D28FE0043CF47 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 622069CF1E5D28FE0043CF47 /* CoreDataDemo.xcdatamodeld */; };
+		622069D31E5D29180043CF47 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622069D21E5D29180043CF47 /* CoreData.framework */; };
+		622069EB1E5D324F0043CF47 /* CoreDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069EA1E5D324F0043CF47 /* CoreDataBase.m */; };
+		622069EE1E5D32A60043CF47 /* CarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069ED1E5D32A60043CF47 /* CarModel.m */; };
 		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
 		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
 		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
@@ -102,6 +106,13 @@
 		622069C91E5BC8810043CF47 /* ThreadBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadBase.m; sourceTree = "<group>"; };
 		622069CB1E5BDA4C0043CF47 /* ThreadLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLock.h; sourceTree = "<group>"; };
 		622069CC1E5BDA4C0043CF47 /* ThreadLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadLock.m; sourceTree = "<group>"; };
+		622069D01E5D28FE0043CF47 /* CoreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo.xcdatamodel; sourceTree = "<group>"; };
+		622069D21E5D29180043CF47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		622069E91E5D324F0043CF47 /* CoreDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataBase.h; sourceTree = "<group>"; };
+		622069EA1E5D324F0043CF47 /* CoreDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataBase.m; sourceTree = "<group>"; };
+		622069EC1E5D32A60043CF47 /* CarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarModel.h; sourceTree = "<group>"; };
+		622069ED1E5D32A60043CF47 /* CarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarModel.m; sourceTree = "<group>"; };
+		622069EF1E5D397A0043CF47 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
 		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
 		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -129,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622069D31E5D29180043CF47 /* CoreData.framework in Frameworks */,
 				DE03006BED0A54CE33206F7C /* libPods-WorkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				620146F31E139C7A00D91A73 /* main.m */,
+				622069EF1E5D397A0043CF47 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 		622069521E5692A30043CF47 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				622069CE1E5D28430043CF47 /* CoreData */,
 				622069BB1E5ADB310043CF47 /* RunTime */,
 				622069531E5692A30043CF47 /* GCDBase.h */,
 				622069541E5692A30043CF47 /* GCDBase.m */,
@@ -267,6 +281,18 @@
 				622069C61E5AE3B60043CF47 /* NSDictionary+NilSafe.m */,
 			);
 			path = RunTime;
+			sourceTree = "<group>";
+		};
+		622069CE1E5D28430043CF47 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				622069CF1E5D28FE0043CF47 /* CoreDataDemo.xcdatamodeld */,
+				622069E91E5D324F0043CF47 /* CoreDataBase.h */,
+				622069EA1E5D324F0043CF47 /* CoreDataBase.m */,
+				622069EC1E5D32A60043CF47 /* CarModel.h */,
+				622069ED1E5D32A60043CF47 /* CarModel.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		628F59F01E541F840051A46C /* MVVM */ = {
@@ -335,6 +361,7 @@
 		E056C725750F492EC2C81553 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				622069D21E5D29180043CF47 /* CoreData.framework */,
 				73662F7FB8EE9D6C28A069B6 /* libPods-WorkDemo.a */,
 				3A90AD8F813BF8885297C229 /* libPods-WorkDemoTests.a */,
 				3D9D51A1011F141C89FD6D87 /* libPods-WorkDemoUITests.a */,
@@ -628,15 +655,18 @@
 			files = (
 				628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */,
 				622069C11E5ADB860043CF47 /* RuntimeBase.m in Sources */,
+				622069EE1E5D32A60043CF47 /* CarModel.m in Sources */,
 				622069CD1E5BDA4C0043CF47 /* ThreadLock.m in Sources */,
 				620146FA1E139C7A00D91A73 /* ViewController.m in Sources */,
 				622069CA1E5BC8810043CF47 /* ThreadBase.m in Sources */,
 				622069BE1E5ADB530043CF47 /* Student.m in Sources */,
 				628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */,
+				622069EB1E5D324F0043CF47 /* CoreDataBase.m in Sources */,
 				628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */,
 				6220695C1E5692A30043CF47 /* KVCBase.m in Sources */,
 				628F5A151E5435250051A46C /* TestCell.m in Sources */,
 				628F5A0F1E5434CB0051A46C /* TestViewController.m in Sources */,
+				622069D11E5D28FE0043CF47 /* CoreDataDemo.xcdatamodeld in Sources */,
 				628F5A011E54324D0051A46C /* ProBasicVModel.m in Sources */,
 				628F5A081E54337F0051A46C /* TestHomeModel.m in Sources */,
 				628F5A0B1E5433B00051A46C /* ProBasicModel.m in Sources */,
@@ -796,6 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C38VDDR6ZD;
+				GCC_PREFIX_HEADER = /Users/akixie/Desktop/Xcode/Demo/WorkDemo/WorkDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WorkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AX.WorkDemo;
@@ -809,6 +840,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C38VDDR6ZD;
+				GCC_PREFIX_HEADER = /Users/akixie/Desktop/Xcode/Demo/WorkDemo/WorkDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WorkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AX.WorkDemo;
@@ -910,6 +942,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		622069CF1E5D28FE0043CF47 /* CoreDataDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				622069D01E5D28FE0043CF47 /* CoreDataDemo.xcdatamodel */,
+			);
+			currentVersion = 622069D01E5D28FE0043CF47 /* CoreDataDemo.xcdatamodel */;
+			path = CoreDataDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 620146E71E139C7A00D91A73 /* Project object */;
 }

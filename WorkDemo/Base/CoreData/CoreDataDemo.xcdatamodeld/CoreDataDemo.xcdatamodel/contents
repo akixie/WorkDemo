@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Car" representedClassName="Car" syncable="YES" codeGenerationType="class">
+        <attribute name="carDiatance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carIsDefault" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Car" positionX="-45" positionY="0" width="128" height="135"/>
+    </elements>
+</model>
