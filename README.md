@@ -5,6 +5,8 @@
 
 |----Base  *基础知识*
 
+|----|____CoreData *增、删、改、查，数据迁移，版本控制*
+
 |----|____RunTime  *动态变量控制，Category属性扩展，动态交换方法，NSDictionary支持Nil与NSNull*
 
 |----|____GCDBase  *串行，并行，内存管理，监听任务组，多任务平行运算*
