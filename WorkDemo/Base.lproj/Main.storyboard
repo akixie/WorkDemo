@@ -33,6 +33,14 @@
                                     <segue destination="qzV-mT-QsM" kind="show" id="SlE-i1-kc6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="et0-Vl-hb3">
+                                <rect key="frame" x="156" y="114" width="117" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CoreAnimation"/>
+                                <connections>
+                                    <segue destination="IcO-it-iv5" kind="show" id="tTH-Vs-Mtj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -61,6 +69,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Op8-6m-9Dw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-591" y="137"/>
+        </scene>
+        <!--CoreAnimation-->
+        <scene sceneID="eJX-IW-Shc">
+            <objects>
+                <viewController title="CoreAnimation" id="IcO-it-iv5" customClass="CoreAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7j-Tf-bbC"/>
+                        <viewControllerLayoutGuide type="bottom" id="bWm-N1-mXG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nvQ-Xq-18d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJI-Qw-89i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="-559"/>
         </scene>
         <!--MVVMoudle-->
         <scene sceneID="5fH-lk-QFj">

@@ -14,6 +14,7 @@ CoreDataBase *_coreDataBase;
 
 +(CoreDataBase *)sharedCoreData{
     static dispatch_once_t onceToken;
+    //dispatch_once 这个接口可以保证在整个应用程序生命周期中，某段代码只被执行一次
     dispatch_once(&onceToken, ^{
         _coreDataBase = [[CoreDataBase alloc] init];
     });
@@ -126,6 +127,28 @@ CoreDataBase *_coreDataBase;
         [listArr addObject:model];
     }
     return listArr;
+}
+
+-(void)versionControl{
+    /*
+     数据迁移
+     假设存在这样一个场景，car这个实体现有的属性字段已经无法满足我们的需求，需要给它添加几个字段并修改原有的部分字段，这个时候我们就需要使用数据迁移了，否则程序会crash！
+     
+     ok ！我们在本demo中继续演示 版本迁移
+     
+     (1) 选中你的coreDataDemo.xcdatamodeld文件，选择Xcode菜单editor->Add Model Version
+     
+     比如取名：coreDataDemo 2.xcdatamodel
+     这个时候你会发现CoreData.xcdatamodeld中多了一个版本文件，如图：
+     
+     (2) 选择刚才创建的版本，在inspector中的Versioned Core Data Model选择Current模版为coreDataDemo 2.xcdatamodel
+     (3) 修改新数据模型coreDataDemo 2，在新的文件上添加属性字段和修改实体 ( 切记！！！是在新的coreDataDemo 2上添加及修改属性)
+     (4) 修改原来的实体文件（或者删除原来的实体文件，重新生成新的实体下的类）
+     (5)在AppDelegate.m的persistentStoreCoordinator中添加代码：
+     
+     参考：http://www.tuicool.com/articles/n6r2EzU
+     参考：http://www.jianshu.com/p/b3b764fc5191
+     */
 }
 
 

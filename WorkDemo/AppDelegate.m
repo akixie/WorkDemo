@@ -82,6 +82,8 @@
     _persistentStoreCoordinator1 = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel1]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataDemo.sqlite"];
     NSLog(@"%@",storeURL);
+    //文件路径：
+    //file:///Users/akixie/Library/Developer/CoreSimulator/Devices/5AEC91EA-4D8A-4F06-AB09-630BDEDBCD15/data/Containers/Data/Application/C21D70B0-902F-4795-9CB9-17AC3C1D9A4C/Documents/CoreDataDemo.sqlite
     
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
@@ -100,6 +102,15 @@
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
+        
+        /*
+         检查错误是非常重要的，因为在开发过程中，这很有可能经常出错。当 Core Data 发现你改变了数据模型时，就会暂停操作。
+         你也可以通过设置选项来告诉 Core Data 在遇到这种情况后怎么做，这在 Martin 关于 迁移 的文章中彻底的解释了。
+         注意，最后一行增加了一个 undo manager；我们将在稍后用到。
+         在 iOS 中，你需要明确的去增加一个 undo manager，但是在 Mac 中，undo manager 是默认有的。
+         
+         Martin文章：（自定义 Core Data 迁移） https://objccn.io/issue-4-7/
+         */
     }
     
     return _persistentStoreCoordinator1;
@@ -116,6 +127,7 @@
     if (!coordinator) {
         return nil;
     }
+    //NSMainQueueConcurrencyType:设置堆栈,明确你是使用基于队列的并发模型。
     _managedObjectContext1 = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext1 setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext1;
