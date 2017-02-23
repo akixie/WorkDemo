@@ -1,9 +1,15 @@
 # WorkDemo
-> 工作中遇到的知识点总结
+> 常用知识点总结
 
 # 目录说明
 
 |----Base  *基础知识*
+
+|----|____CoreAnimation *动画*
+
+|----|____|_____CALayer *核心动画几种常见Layer用法，CATextLayer,CAShapeLayer,CAEmitterLayer等*
+
+|----|____|_____CoreAnimation *动画的三种触发方式，常见几种动画实现（位移，缩放，旋转，抖动等）*
 
 |----|____CoreData *增、删、改、查，数据迁移，版本控制*
 
