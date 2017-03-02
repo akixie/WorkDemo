@@ -28,7 +28,7 @@
 @implementation GCDBase
 
 -(void)createDemo{
-    //创建serial dispatch queue
+    //创建serial dispatch queue，同步执行的，但多个Serial,Serial queue与Serial queue之间是并发执行的
     //可以创建多个串行队列，串行队列也可以并行执行。决不能随意的大量生产Serial Dispatch Queue。
     dispatch_queue_t serialQueue = dispatch_queue_create("serial", NULL);
     dispatch_async(serialQueue, ^{
@@ -43,11 +43,19 @@
         NSLog(@"hello concurrent dispatch queue");
     });
     
-    //全局Global dispatch queue
+    //全局Global dispatch queue，获取一个全局队列，系统开启的全局线程。用priority指定队列的优先级，而flag作为保留字段备用（一般为0）。
     dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
     dispatch_async(globalQueue, ^{
         NSLog(@"");
     });
+    
+    //返回主队列，也就是UI队列。它一般用于在其它队列中异步完成了一些工作后，需要在UI队列中更新界面。
+    //它是全局可用的serial queue
+    //系统默认就有一个串行队列main_queue
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"hello main dispatch queue");
+    });
+    
     
     
     //内存管理
@@ -66,10 +74,6 @@
     dispatch_resume(serialQueue);
     //注意，dispatch_suspend（以及dispatch_resume）在主线程上不起作用
     
-    //执行主线程
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"hello main dispatch queue");
-    });
     
     
     
@@ -252,6 +256,8 @@
 -(void)groupasyncDemo{
     dispatch_queue_t disqueue =  dispatch_queue_create("com.shidaiyinuo.NetWorkStudy", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t disgroup = dispatch_group_create();
+    //ios中使用gcd让两个线程执行完结束后再去执行另一个线程
+    //如下，任务一与任务二完成后，再执行任务三
     dispatch_group_async(disgroup, disqueue, ^{
         NSLog(@"任务一完成");
     });
@@ -261,6 +267,7 @@
     });
     dispatch_group_notify(disgroup, disqueue, ^{
         NSLog(@"dispatch_group_notify 执行");
+        NSLog(@"任务三");
     });
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         dispatch_group_wait(disgroup, dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC));

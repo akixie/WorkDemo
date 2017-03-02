@@ -33,6 +33,15 @@
 
 
 
+//kvc @count,@avg,@sum,@max,@min
+@interface ProductApple : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) NSInteger price;
+@property (nonatomic, copy) NSString *launchDate;
+
+@end
+
 
 //-----kvc demo2----
 

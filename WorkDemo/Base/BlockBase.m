@@ -78,39 +78,25 @@ typedef void (^blockD2)(int a);
     self.aBlock = ^(id obj, NSUInteger idx, BOOL *stop) {
         [weakSelf doSomething:idx];
     };
-    
-    //    这个例子的区别在于：block被self strong引用。所以结果就是block中引用了self，self引用了block。
-    //    那么这个时候，如果你不使用weakself，则self和block永远都不会被释放。
-    //
-    //    那么是不是遇到block都要使用weakself呢？
-    //    当然不是，而且如果全部使用weakself，会出现你想执行block中的代码时，self已经被释放掉了的情况。
-    
+    //这个例子的区别在于：block被self strong引用。所以结果就是block中引用了self，self引用了block。
+    //那么这个时候，如果你不使用weakself，则self和block永远都不会被释放。
+    //那么是不是遇到block都要使用weakself呢？
+    //当然不是，而且如果全部使用weakself，会出现你想执行block中的代码时，self已经被释放掉了的情况。
     NSArray *anArray = @[@"1", @"2", @"3"];
     [anArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [self doSomething:idx];
-        
         if (idx == 1) {
-            
             * stop = YES;//用来停止遍历
-            
         }
-        
     }];
-    //    这种情况下，block中retain了self，当block中的代码被执行完后，self就会被ARC释放。所以不需要处理weakself的情况。
-    
-    
-    //    字典遍历
+    //这种情况下，block中retain了self，当block中的代码被执行完后，self就会被ARC释放。所以不需要处理weakself的情况。
+    //字典遍历
     NSDictionary *dic =    @{@"姓名":@"Scarlett",
-                             
                              @"年龄":@"26",
-                             
                              @"性别":@"女"};
     [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
-        
         NSLog(@"%@======%@",key,obj);
-        
     }];
-    
 }
 
 

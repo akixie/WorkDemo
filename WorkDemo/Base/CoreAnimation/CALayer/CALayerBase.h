@@ -27,4 +27,7 @@
 //CAShapeLayer是图形layer层，我们可以自定义这个层的形状。
 -(void)shapeLayerInit:(UIView*)sView;
 
+//CATextLayer可以进行文本的绘制
+-(void)textLayer:(UIView*)labelView;
+
 @end

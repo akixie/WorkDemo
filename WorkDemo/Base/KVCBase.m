@@ -39,33 +39,67 @@
       ）
      */
     
+    //而@unionOfObjects则允许重复。如果其中任何涉及的对象为nil，则抛出异常。
+    NSArray *values = [array valueForKeyPath:@"@unionOfArray.value"];
+    NSLog(@"values:%@",values);
+    //@distinctUnionOfObjects操作符返回被操作对象指定属性的集合并做去重操作，
+    NSArray *values2 = [array valueForKeyPath:@"@distinctUnionOfArrays.value"];
+    NSLog(@"values2:%@",values2);
+    
     
     //KVC还定义了特殊的一些常用操作，使用valueForKeyPath:结合操作符来使用，所定义的keyPath格式入下图所示
     //Left key path:如果有，则代表需要操作的对象路径(相对于调用者)
     //Collection operator:以"@"开头的操作符
     //Right key path:指定被操作的属性
     
-    //常规操作符：@avg、@count、@max、@min、@sum
+    //常规操作符：平均数@avg、总数@count、最大值@max、最小值@min、总数@sum
+    NSMutableArray *productArray = [[NSMutableArray alloc] init];
+    ProductApple *p1 = [[ProductApple alloc] init];
+    p1.name = @"iPhone 5";
+    p1.price = 199;
+    p1.launchDate = @"2012.09";
+    [productArray addObject:p1];
+    ProductApple *p2 = [[ProductApple alloc] init];
+    p2.name = @"iPad Mini";
+    p2.price = 329;
+    p2.launchDate = @"2012.11";
+    [productArray addObject:p2];
+    ProductApple *p3 = [[ProductApple alloc] init];
+    p3.name = @"MacBook Pro";
+    p3.price = 1699;
+    p3.launchDate = @"2012.07";
+    [productArray addObject:p3];
+    ProductApple *p4 = [[ProductApple alloc] init];
+    p4.name = @"iMac";
+    p4.price = 1299;
+    p4.launchDate = @"2012.11";
+    [productArray addObject:p4];
+    
+    
+    [productArray valueForKeyPath:@"@count"];//4
+    [productArray valueForKeyPath:@"@sum.price"];//3526.00
+    [productArray valueForKeyPath:@"@avg.price"];//881.50
+    [productArray valueForKeyPath:@"@max.price"];//1699.00
+    [productArray valueForKeyPath:@"@min.price"];//199.00;
+    
     //对象操作符：@distinctUnionOfObjects、@unionOfObjects
     
-    NSArray *values = [array valueForKeyPath:@"@unionOfObjects.value"];
-    NSLog(@"values:%@",values);
+    ProductApple *p5 = [[ProductApple alloc] init];
+    p5.name = @"iMac";
+    p5.price = 1299;
+    p5.launchDate = @"2012.11";
+    [productArray addObject:p4];
+    //而@unionOfObjects则允许重复。如果其中任何涉及的对象为nil，则抛出异常。
+    NSArray *nameArray = [productArray valueForKeyPath:@"@unionOfObjects.name"];
+    NSLog(@"names:%@",nameArray);//iphone5,ipad mini,macbook pro,iMac,iMac
+    
+
     //@distinctUnionOfObjects操作符返回被操作对象指定属性的集合并做去重操作，
-    //而@unionOfObjects则允许重复。如果其中任何涉及的对象为nil，则抛出异常。
+    NSArray *nameArray2 = [productArray valueForKeyPath:@"@distinctUnionOfObjects.name"];
+    NSLog(@"names2:%@",nameArray2);
     
-    //Array和Set操作符：Array和Set操作符操作对象是嵌套型的集合对象
-    
-    //@distinctUnionOfArrays、@unionOfArrays
-    
-    NSArray *values2 = [array valueForKeyPath:@"@distinctUnionOfArrays.value"];
-    NSLog(@"values2:%@",values2);
-    //同样的，返回被操作集合下的集合中的对象的指定属性的集合，并且做去重操作，
-    //而@unionOfObjects则允许重复。如果其中任何涉及的对象为nil，则抛出异常。
-    
-    //@distinctUnionOfSets
-    
-    //NSSet *values = [setOfobjectsSets valueForKeyPath:@"@distinctUnionOfSets.value"];
-    //返回结果同理于NSArray。
+    //@distinctUnionOfSets: 和@distinctUnionOfArrays差不多,
+    //但是它期望的是一个包含着NSSet对象的NSSet，并且会返回一个NSSet对象。因为集合不能包含重复的值，所以它只有distinct操作。
     
 }
 
@@ -224,6 +258,17 @@
     //本例中使用的key是elfins，同理的如果key叫human，KVC就会去寻找-countOfHuman:
 
 }
+
+@end
+
+
+//kvc @count,@avg,@sum,@max,@min
+@interface ProductApple() 
+
+@end
+@implementation ProductApple
+
+
 
 @end
 

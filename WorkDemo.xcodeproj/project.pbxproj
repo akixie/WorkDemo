@@ -34,6 +34,7 @@
 		622069F71E5EC34E0043CF47 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622069F61E5EC34E0043CF47 /* CoreAnimationViewController.m */; };
 		6230A1CF1E5ED627000D1D9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6230A1CE1E5ED627000D1D9F /* CoreText.framework */; };
 		6230A1D21E5ED8EF000D1D9F /* CoreAnimationBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6230A1D11E5ED8EF000D1D9F /* CoreAnimationBase.m */; };
+		6230A1D81E67F410000D1D9F /* NSTimerWeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6230A1D71E67F410000D1D9F /* NSTimerWeak.m */; };
 		628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F31E542C450051A46C /* SDWebImageTools.m */; };
 		628F59F71E5430BA0051A46C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 628F59F61E5430BA0051A46C /* test.json */; };
 		628F59FA1E5430E40051A46C /* ProBasicSimNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 628F59F91E5430E40051A46C /* ProBasicSimNetworking.m */; };
@@ -124,6 +125,8 @@
 		6230A1CE1E5ED627000D1D9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		6230A1D01E5ED8EF000D1D9F /* CoreAnimationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationBase.h; sourceTree = "<group>"; };
 		6230A1D11E5ED8EF000D1D9F /* CoreAnimationBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationBase.m; sourceTree = "<group>"; };
+		6230A1D61E67F410000D1D9F /* NSTimerWeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerWeak.h; sourceTree = "<group>"; };
+		6230A1D71E67F410000D1D9F /* NSTimerWeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerWeak.m; sourceTree = "<group>"; };
 		628F59F21E542C450051A46C /* SDWebImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageTools.h; sourceTree = "<group>"; };
 		628F59F31E542C450051A46C /* SDWebImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTools.m; sourceTree = "<group>"; };
 		628F59F61E5430BA0051A46C /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 		622069521E5692A30043CF47 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6230A1D51E6019BA000D1D9F /* CoreGraphics */,
 				622069F01E5EBF0C0043CF47 /* CoreAnimation */,
 				622069CE1E5D28430043CF47 /* CoreData */,
 				622069BB1E5ADB310043CF47 /* RunTime */,
@@ -277,6 +281,8 @@
 				622069C91E5BC8810043CF47 /* ThreadBase.m */,
 				622069CB1E5BDA4C0043CF47 /* ThreadLock.h */,
 				622069CC1E5BDA4C0043CF47 /* ThreadLock.m */,
+				6230A1D61E67F410000D1D9F /* NSTimerWeak.h */,
+				6230A1D71E67F410000D1D9F /* NSTimerWeak.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -327,6 +333,13 @@
 				622069F31E5EBF790043CF47 /* CALayerBase.m */,
 			);
 			path = CALayer;
+			sourceTree = "<group>";
+		};
+		6230A1D51E6019BA000D1D9F /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		628F59F01E541F840051A46C /* MVVM */ = {
@@ -699,6 +712,7 @@
 				628F5A041E5432E60051A46C /* TestHomeVModel.m in Sources */,
 				622069EB1E5D324F0043CF47 /* CoreDataBase.m in Sources */,
 				6230A1D21E5ED8EF000D1D9F /* CoreAnimationBase.m in Sources */,
+				6230A1D81E67F410000D1D9F /* NSTimerWeak.m in Sources */,
 				628F59F41E542C450051A46C /* SDWebImageTools.m in Sources */,
 				6220695C1E5692A30043CF47 /* KVCBase.m in Sources */,
 				628F5A151E5435250051A46C /* TestCell.m in Sources */,
